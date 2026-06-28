@@ -1,0 +1,45 @@
+{
+    "name": "lukasbableck/contao-news-datemodified-bundle",
+    "type": "contao-bundle",
+	"description": "This bundle adds the dateModified attribute to Contao News articles JSON-LD.",
+	"keywords": [
+		"contao",
+		"news",
+		"schema",
+		"json-ld",
+		"datemodified",
+		"seo"
+	],
+    "license": "LGPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Lukas Bableck",
+			"email": "lukas@bableck.dev",
+			"homepage": "https://bableck.dev"
+		}
+	],
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.7",
+        "contao/news-bundle": "^5.7",
+        "spatie/schema-org": "^3.10 || ^4.0",
+        "symfony/dependency-injection": "^7.4",
+        "symfony/http-foundation": "^7.4",
+        "symfony/http-kernel": "^7.4"
+    },
+	"conflict": {
+		"contao/manager-plugin": "<2.0 || >=3.0"
+	},
+	"require-dev": {
+		"contao/manager-plugin": "^2.0",
+		"friendsofphp/php-cs-fixer": "^3.86"
+	},
+    "autoload": {
+        "psr-4": {
+            "Lukasbableck\\ContaoNewsDatemodifiedBundle\\": "src/"
+        }
+    },
+	"extra": {
+		"contao-manager-plugin": "Lukasbableck\\ContaoNewsDatemodifiedBundle\\ContaoManager\\Plugin"
+	}
+}
