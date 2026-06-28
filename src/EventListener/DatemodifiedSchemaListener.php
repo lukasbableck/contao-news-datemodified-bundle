@@ -19,7 +19,7 @@ class DatemodifiedSchemaListener {
     ) {
     }
 
-    #[AsHook('getFrontendModule', priority: -1)]
+    #[AsHook('getFrontendModule', priority: 61)]
     public function onGetFrontendModule(ModuleModel $model, string $buffer, object $module): string {
         if (!$request = $this->requestStack->getCurrentRequest()) {
             return $buffer;
